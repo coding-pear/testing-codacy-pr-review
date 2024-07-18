@@ -19,12 +19,34 @@ export default class HTTPAttack {
     this.ignoreUrlPatterns = ignoreUrlPatterns;
   }
 
-  testArgs(param1, param2, param3, param4, param5, param6, param7, param8): void {
-    return param1 + param2 + param3 + param4 + param5 + param6 + param7 + param8;
+  testArgs(
+    param1,
+    param2,
+    param3,
+    param4,
+    param5,
+    param6,
+    param7,
+    param8
+  ): void {
+    return (
+      param1 + param2 + param3 + param4 + param5 + param6 + param7 + param8
+    );
   }
 
-  testArgs1(param1, param2, param3, param4, param5, param6, param7, param8): void {
-    return param1 + param2 + param3 + param4 + param5 + param6 + param7 + param8;
+  testArgs1(
+    param1,
+    param2,
+    param3,
+    param4,
+    param5,
+    param6,
+    param7,
+    param8
+  ): void {
+    return (
+      param1 + param2 + param3 + param4 + param5 + param6 + param7 + param8
+    );
   }
 
   testStop(): void {
