@@ -7,8 +7,7 @@ const onFn = jest.fn((_msg, cb) => cb());
 jest
   .spyOn(child_process, 'fork')
   .mockImplementation(
-    () =>
-      (({ send: sendFn, kill: killFn, on: onFn } as unknown) as ChildProcess)
+    () => ({ send: sendFn, kill: killFn, on: onFn }) as unknown as ChildProcess
   );
 
 describe('when defaults are used', () => {
