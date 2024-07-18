@@ -5,18 +5,30 @@ export interface HTTPAttackOptions {
 }
 
 export default class HTTPAttack {
-  static configure(opts: HTTPAttackOptions): () => HTTPAttack {
+  private static configure(opts: HTTPAttackOptions): () => HTTPAttack {
     return () => {
       const attack = new HTTPAttack(opts);
       return attack;
     };
   }
 
-  ignoreUrlPatterns: string[];
-  stopped = false;
+  public ignoreUrlPatterns: string[];
+  public stopped = false;
 
   constructor({ ignoreUrlPatterns = [] }: HTTPAttackOptions = {}) {
     this.ignoreUrlPatterns = ignoreUrlPatterns;
+  }
+
+  testArgs(param1, param2, param3, param4, param5, param6, param7, param8): void {
+    return param1 + param2 + param3 + param4 + param5 + param6 + param7 + param8;
+  }
+
+  testArgs1(param1, param2, param3, param4, param5, param6, param7, param8): void {
+    return param1 + param2 + param3 + param4 + param5 + param6 + param7 + param8;
+  }
+
+  testStop(): void {
+    this.stopped = true;
   }
 
   start(): void {
